@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSE F&amp;O Market Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+  <h2>NSE F&amp;O Market Dashboard</h2>
+
+  <div class="tab-nav">
+    <button class="tab-nav-btn active" id="tabBtn-market" onclick="switchDashboardTab('market')">
+      &#128202; F&amp;O Market Signals
+    </button>
+    <button class="tab-nav-btn" id="tabBtn-analyzer" onclick="switchDashboardTab('analyzer')">
+      &#128373; 360&#176; Stock Analyzer
+      <span class="tab-badge" style="background:#2563eb; color:white;">Unified</span>
+    </button>
+    <button class="tab-nav-btn" id="tabBtn-trade-plan" onclick="switchDashboardTab('trade-plan')">
+      &#127919; Prediction Result
+      <span class="tab-badge" id="pred-badge">2 Active</span>
+    </button>
+    <button class="tab-nav-btn" id="tabBtn-quality" onclick="switchDashboardTab('quality')">
+      &#9733; Stock Scores (Q / G / V / T)
+      <span class="tab-badge">213</span>
+    </button>
+    <button class="tab-nav-btn" id="tabBtn-analytics" onclick="switchDashboardTab('analytics')">
+      &#9889; AI Quant Predictions
+      <span class="tab-badge">213</span>
+    </button>
+    <button class="tab-nav-btn" id="tabBtn-retrospective" onclick="switchDashboardTab('retrospective')">
+      &#128221; Daily Retrospective
+      <span class="tab-badge">4</span>
+    </button>
+    <button class="tab-nav-btn" id="tabBtn-todos" onclick="switchDashboardTab('todos')">
+      &#9889; AI Improvement To-Dos
+      <span class="tab-badge" id="nav-todos-badge">10</span>
+    </button>
+  </div>
+
+  <div id="tab-container">
+    <div id="tabLoading" class="tab-loading-spinner" style="display:none;">
+      <div class="tab-spinner"></div>
+      <div class="tab-loading-text">Loading dashboard intelligence...</div>
+    </div>
+  </div>
+
+  <script src="js/tab-templates.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
